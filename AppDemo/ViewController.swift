@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, detalleViewControllerDelegate, agregarViewControllerDelegate {
-    var datos = [("alvaro",20),("erick",60)]
+    
+    
+    @IBOutlet weak var imgfoto: UIImageView!
+    
+    @IBOutlet weak var lblfacenombre: UILabel!
+    
+    
+    var datos = [("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60),("alvaro",20),("erick",60)]
     var esEdicion = false
     
     func agregarRegistro(nombre: String, edad: Int){
@@ -27,6 +36,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("vista cargada")
+        
+        imgfoto.image = UIImage(named: "descarga")
+        lblfacenombre.text = "firulais"
         
     }
 
@@ -70,13 +82,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let proto = (indexPath.row % 2 == 0) ? "proto1" : "proto2"
+       // let proto = (indexPath.row % 2 == 0) ? "proto1" : "proto2"
         
-        let vista = tableView.dequeueReusableCell(withIdentifier: proto, for: indexPath) as! filaTableViewCell
+        let vista = tableView.dequeueReusableCell(withIdentifier: "proto1", for: indexPath) as! filaTableViewCell
       /*  vista.lblizq.text = "index"
         vista.lblder.text = "\(indexPath.row)"*/
         vista.lblizq.text = "\(datos[indexPath.row].0)"
         vista.lblder.text = "\(datos[indexPath.row].1)"
+     
+        let idFacebook = FBSDKAccessToken.current().userID
+        let url = URL(string: "http://graph.facebook.com/829736847107787/picture?type=large")
+        let dato: Data?
+        
+        do{
+            dato = try Data(contentsOf: url!)
+            vista.imgfotofila.image = UIImage(data: dato!)
+        }catch {
+            print("Error cargando la imagen.! \(error.localizedDescription)")
+            dato = nil
+            imgfoto.image = UIImage(named: "descarga")
+        }
+        
+    
         return vista
         
     }
@@ -86,8 +113,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         (performSegue(withIdentifier: "detalle sigue", sender: self))
     }
+    @IBAction func btnrefresh(_ sender: Any) {
+        let idFacebook = FBSDKAccessToken.current().userID
+        
+        
+        let cadenaUrl =  "http://graph.facebook.com/829736847107787/picture?type=large"
+      //  let dato: Data?
+        imgfoto.loadPicture(url: cadenaUrl)
+        
+    }
     @IBAction func btnagregar_segue(_ sender: Any) {
         performSegue(withIdentifier: "agregar segue", sender: self)
+        
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){

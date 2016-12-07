@@ -10,6 +10,7 @@ import UIKit
 
 class filaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgfotofila: UIImageView!
     @IBOutlet weak var lblizq: UILabel!
     @IBOutlet weak var lblder: UILabel!
     override func awakeFromNib() {
