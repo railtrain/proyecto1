@@ -26,7 +26,7 @@ class detalleViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
-        lblnombre.text = "Has elegido a \(dato) y tiene \(datoNumero) años."
+        lblnombre.text = ("Has elegido a \(dato) y tiene \(datoNumero) años.")
         if delegado != nil
         {
             delegado?.numeroCambiado(numero: numerofila)

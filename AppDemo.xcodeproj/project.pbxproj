@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		081A4C8D1DF8907C009BA44B /* login2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081A4C8C1DF8907C009BA44B /* login2ViewController.swift */; };
 		083586AF1DF7399B00BEA602 /* agregarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083586AE1DF7399B00BEA602 /* agregarViewController.swift */; };
+		08462A951DF9EBD70081E017 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08462A941DF9EBD70081E017 /* GoogleService-Info.plist */; };
 		08484DBB1DF71A0600F0DF46 /* detalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08484DBA1DF71A0600F0DF46 /* detalleViewController.swift */; };
 		08484DBE1DF7286200F0DF46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08484DBC1DF7286200F0DF46 /* Main.storyboard */; };
 		084E204E1DF8B6EF00958A2E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E204D1DF8B6EF00958A2E /* UIImageViewExtension.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		081A4C8C1DF8907C009BA44B /* login2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login2ViewController.swift; sourceTree = "<group>"; };
 		083586AE1DF7399B00BEA602 /* agregarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = agregarViewController.swift; sourceTree = "<group>"; };
+		08462A941DF9EBD70081E017 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		08484DBA1DF71A0600F0DF46 /* detalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detalleViewController.swift; sourceTree = "<group>"; };
 		08484DBD1DF7286200F0DF46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		084E204C1DF8AB5700958A2E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../MyPlayground.playground; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				087B8AD31DF5D7F2007E5C46 /* Assets.xcassets */,
 				087B8AD51DF5D7F2007E5C46 /* LaunchScreen.storyboard */,
 				087B8AD81DF5D7F2007E5C46 /* Info.plist */,
+				08462A941DF9EBD70081E017 /* GoogleService-Info.plist */,
 				087B8ADE1DF5F70E007E5C46 /* filaTableViewCell.swift */,
 				08484DBA1DF71A0600F0DF46 /* detalleViewController.swift */,
 				083586AE1DF7399B00BEA602 /* agregarViewController.swift */,
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08484DBE1DF7286200F0DF46 /* Main.storyboard in Resources */,
+				08462A951DF9EBD70081E017 /* GoogleService-Info.plist in Resources */,
 				087B8AD71DF5D7F2007E5C46 /* LaunchScreen.storyboard in Resources */,
 				087B8AD41DF5D7F2007E5C46 /* Assets.xcassets in Resources */,
 			);
